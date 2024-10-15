@@ -1,0 +1,11 @@
+<resources>
+    <style name="Base.Theme.Calculadora" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Cor primária -->
+        <item name="colorPrimary">@color/rosa</item>
+        <!-- Cor da barra de status -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Theme.Calculadora" parent="Base.Theme.Calculadora" />
+</resources>
+

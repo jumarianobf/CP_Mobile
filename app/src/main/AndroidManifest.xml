@@ -32,6 +32,11 @@
             android:exported="true"
             />
 
+        <activity
+            android:name=".ResultadoActivity"
+            android:exported="true"
+            />
+
     </application>
 
 </manifest>

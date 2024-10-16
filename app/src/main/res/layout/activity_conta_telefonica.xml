@@ -9,69 +9,96 @@
     android:orientation="vertical"
     tools:context=".ContaTelefonicaActivity">
 
-    <Button
+
+    <ImageView
         android:id="@+id/button_voltar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Voltar"
-        android:backgroundTint="@color/rosa"
-        android:textColor="@android:color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_gravity="start"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="43dp"
+        android:background="@drawable/arrow_back"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/editTextAssinatura"
+        app:layout_constraintEnd_toStartOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="170dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="174dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="46dp"
+        android:text="CheckPoint"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextAssinatura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_voltar"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextAssinatura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="4dp"
         android:backgroundTint="@color/rosa_claro"
+        android:enabled="false"
         android:hint="R$ 59.90"
         android:inputType="numberDecimal"
+        android:text="R$ 59,90"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextMinutosLocal"
+        app:layout_constraintTop_toBottomOf="@+id/button_voltar"
         tools:ignore="MissingConstraints" />
-
 
     <EditText
         android:id="@+id/editTextMinutosLocal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:backgroundTint="@color/rosa_claro"
-        android:hint="Minutos"
-        android:inputType="number"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextMinutosCelular"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editTextMinutosCelular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="34dp"
         android:backgroundTint="@color/rosa_claro"
-        android:hint="Minutos"
+        android:hint="Minutos Chamada Local"
         android:inputType="number"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/buttonCalcular"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:backgroundTint="@color/rosa"
-        android:text="CALCULAR"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAssinatura"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextMinutosCelular"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="@color/rosa_claro"
+        android:hint="Minutos Chamada Celular"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMinutosLocal"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:layout_marginBottom="231dp"
+        android:backgroundTint="@color/rosa"
+        android:text="CALCULAR"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextMinutosLocal"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

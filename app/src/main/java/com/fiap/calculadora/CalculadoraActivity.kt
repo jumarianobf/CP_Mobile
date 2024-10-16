@@ -1,21 +1,32 @@
 package com.fiap.calculadora
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 class CalculadoraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculadora)
 
+        window.statusBarColor = ContextCompat.getColor(this, R.color.rosa)
+
         val editTextNumero1 = findViewById<EditText>(R.id.editTextNumero1)
         val editTextNumero2 = findViewById<EditText>(R.id.editTextNumero2)
         val radioGroupOperacoes = findViewById<RadioGroup>(R.id.radioGroupOperacoes)
         val buttonCalcular = findViewById<Button>(R.id.buttonCalcular)
+        val backArrow = findViewById<ImageView>(R.id.button_voltar)
+        backArrow.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         buttonCalcular.setOnClickListener {
             val numero1Str = editTextNumero1.text.toString()

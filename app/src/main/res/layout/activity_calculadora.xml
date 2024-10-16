@@ -7,43 +7,80 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <ImageView
+        android:id="@+id/button_voltar"
+        android:layout_width="39dp"
+        android:layout_height="30dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/arrow_back"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumero1"
+        app:layout_constraintEnd_toStartOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="178dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="209dp"
+        android:layout_marginBottom="98dp"
+        android:textColor="@android:color/white"
+        android:text="CheckPoint"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumero1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_voltar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <EditText
         android:id="@+id/editTextNumero1"
-        android:layout_width="351dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="40dp"
         android:hint="Digite o primeiro número"
+        android:backgroundTint="@color/rosa_claro"
         android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumero2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/button_voltar"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <EditText
         android:id="@+id/editTextNumero2"
-        android:layout_width="348dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="50dp"
         android:hint="Digite o segundo número"
+        android:backgroundTint="@color/rosa_claro"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupOperacoes"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumero1"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumero1"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumero1" />
 
     <RadioGroup
         android:id="@+id/radioGroupOperacoes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginBottom="49dp"
+        android:backgroundTint="@color/rosa_claro"
         app:layout_constraintBottom_toTopOf="@+id/buttonCalcular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="@+id/buttonCalcular"
+        app:layout_constraintStart_toStartOf="@+id/buttonCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumero2">
 
         <RadioButton
             android:id="@+id/radioButtonSoma"
@@ -77,9 +114,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="68dp"
+        android:backgroundTint="@color/rosa_claro"
+        android:textColor="@android:color/white"
         android:text="Calcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/button_voltar"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupOperacoes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,13 +28,12 @@ class ResultadoActivity : AppCompatActivity() {
         val custoCelular = intent.getDoubleExtra("CUSTO_CELULAR", 0.0)
         val total = intent.getDoubleExtra("TOTAL", 0.0)
 
-        val resultadoText = """
-            Assinatura          : R$ %.2f
-            Chamada Local       : R$ %.2f
-            Chamada Celular     : R$ %.2f
-            Total               : R$ %.2f
-        """.trimIndent().format(assinatura, custoLocal, custoCelular, total)
+        val resultadoText = StringBuilder()
+        resultadoText.append(String.format("%-24s : R$ %.2f\n", "Assinatura", assinatura))
+        resultadoText.append(String.format("%-24s : R$ %.2f\n", "Chamada Local", custoLocal))
+        resultadoText.append(String.format("%-24s : R$ %.2f\n", "Chamada Celular", custoCelular))
+        resultadoText.append(String.format("%-24s : R$ %.2f\n", "Total", total))
 
-        textViewResultado.text = resultadoText
+        textViewResultado.text = resultadoText.toString()
     }
 }

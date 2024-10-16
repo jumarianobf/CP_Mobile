@@ -42,17 +42,29 @@ class MainActivity : AppCompatActivity() {
 
     private fun showDeveloperDialog() {
         val builder = AlertDialog.Builder(this)
+        builder.setIcon(R.drawable.costumer)
         builder.setTitle("Desenvolvido por")
-        builder.setMessage("Julia Mariano Barsotti Ferreira\nRM: 552713\n" +
-                "\nLeonardo Gaspar Saheb\nRM: 553383\n" +
-                "\nCaio Eduardo Nascimento Martins\nRM: 554025")
+
+        val message = """
+        Julia Mariano Barsotti Ferreira
+        RM: 552713
+        
+        Leonardo Gaspar Saheb
+        RM: 553383
+        
+        Caio Eduardo Nascimento Martins
+        RM: 554025
+    """.trimIndent()
+        builder.setMessage(message)
+
         builder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
 
-        // Personalizando a aparência do AlertDialog
         val dialog = builder.create()
+
         dialog.setOnShowListener {
             dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(resources.getColor(R.color.rosa, theme))
         }
         dialog.show()
     }
+
 }

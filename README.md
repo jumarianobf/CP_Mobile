@@ -23,9 +23,7 @@ Este projeto é um aplicativo Android desenvolvido no Android Studio, seguindo o
 
 ## Requisitos do Projeto
 
-- **Assinatura do aplicativo**: O aplicativo deve ser assinado conforme a imagem especificada no protótipo.
 - **Dark Mode**: O protótipo deve ser visualizado utilizando o modo escuro (Dark Mode) no emulador.
-- **Cores**: Utilizar cores em formato hexadecimal conforme as especificações.
 - **Versões Utilizadas**:
   - AGP: 8.3.1
   - Kotlin: 1.9.0
